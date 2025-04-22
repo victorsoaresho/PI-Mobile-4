@@ -18,15 +18,18 @@ const Wellcome = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.menssage}>
+            <Text style={styles.message}>
                 Seja bem vindo ao portal do clima!
             </Text>
-            <TouchableOpacity style={styles.button} onPress={goToLogin}>
-                <Text styke={style.buttonText}>Login</Text>
+
+            <View style={styles.buttonGroup}>
+            <TouchableOpacity style={styles.buttonLogin} onPress={goToLogin}>
+                <Text style={styles.buttonText}>Login</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={goToCadastro}>
-                <Text styke={style.buttonText}>Cadastre-se</Text>
+            <TouchableOpacity style={styles.buttonCadastro} onPress={goToCadastro}>
+                <Text style={styles.buttonText}>Cadastre-se</Text>
             </TouchableOpacity>
+            </View>
         </View>
     )
 }
@@ -36,27 +39,39 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#fff",
+        backgroundColor: "#000000",
       },
-      input: {
-        borderWidth: 1,
-        borderColor: "#ccc",
+      message: {
+        color: "#ffffff",
+        fontWeight: "400",
+        fontSize: 23
+      },
+      buttonGroup: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        width: "80%",
+        marginTop: 20,
+      },
+      buttonLogin: {
+        backgroundColor: "#0079C2",
         borderRadius: 10,
         padding: 10,
-        marginVertical: 10,
-        width: "80%",
-      },
-      button: {
-        backgroundColor: "#7159c1",
-        borderRadius: 10,
-        padding: 10,
-        width: "80%",
         alignItems: "center",
-        marginVertical: 5,
+        flex: 1,
+        marginHorizontal: 5,
+      },
+      buttonCadastro: {
+        backgroundColor: "#004983",
+        borderRadius: 10,
+        padding: 10,
+        alignItems: "center",
+        flex: 1,
+        marginHorizontal: 5,
       },
       buttonText: {
-        color: "#fff",
-        fontWeight: "bold",
+        color: "#FFFFFF",
+        fontWeight: "400",
+        fontSize: 17
       },
 })
 

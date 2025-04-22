@@ -12,17 +12,20 @@ export default function Routes() {
                 name="Wellcome"
                 component={Wellcome}
                 options={{
-                    title:"Wellcome",
+                    title: "",
                     headerLeft: null,
                     headerTitleAlign: "center",
+                    headerTransparent: true, 
                     headerStyle: {
-                        backgroundColor: "#7159c1",
+                      backgroundColor: "transparent", 
+                      elevation: 0, 
+                      shadowOpacity: 0, 
                     },
                     headerTitleStyle: {
-                        color: "#fff",
-                        fontWeight: "bold",
+                      color: "#fff",
+                      fontWeight: "bold",
                     },
-                }}
+                  }}
 
             />
         </Stack.Navigator>
