@@ -8,6 +8,9 @@ import {
 } from "react-native";
 
 const Wellcome = () => {
+    const navigation = useNavigation();
+    
+
     const goToLogin = () => {
         navigation.navigate("Login");
     }
